@@ -93,9 +93,9 @@ main .interactive__info h2 {
 }
 main .interactive__info p {
   margin: 0;
-  color: #8c8c8c;
+  color: #757575;
   font-family: "Alata";
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   text-align: center;
   padding: 1.2em;
 }
@@ -210,7 +210,7 @@ footer .footer__media {
   justify-content: center;
 }
 footer .footer__copyrights {
-  color: dimgray;
+  color: #f0f0f0;
   font-family: "Alata";
   font-size: 1rem;
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
 
-$dark-gray: hsl(0, 0%, 55%);
-$very-dark-gray: hsl(0, 0%, 41%);
+$gray: #757575;
+$light-gray: #f0f0f0;
 
 *,*::before,*::after {
   box-sizing: border-box;
@@ -121,9 +121,9 @@ main {
       p {
         margin: 0;
 
-        color: $dark-gray;
+        color: $gray;
         font-family: "Alata";
-        font-size: 1.2rem;
+        font-size: 1.05rem;
 
         text-align: center;
         padding: 1.2em;
@@ -306,7 +306,7 @@ footer {
   }
 
   .footer__copyrights {
-    color: $very-dark-gray;
+    color: $light-gray;
 
     font-family: "Alata";
     font-size: 1rem;
