@@ -7,6 +7,28 @@ html {
   font-size: 15px;
 }
 
+.toggle-menu {
+  width: 100vw;
+  height: 100vh;
+  background: black no-repeat;
+  position: fixed;
+}
+.toggle-menu .header {
+  flex-direction: column;
+}
+.toggle-menu .header__nav {
+  display: block;
+}
+.toggle-menu .header__nav-btn {
+  display: none;
+}
+.toggle-menu .header__nav-close {
+  display: inline;
+}
+.toggle-menu .hero {
+  display: none;
+}
+
 body {
   margin: 0;
 }
@@ -45,16 +67,25 @@ header .header__nav li {
   margin-bottom: 0.5em;
   position: relative;
 }
+header .header__nav li:hover {
+  cursor: pointer;
+}
 header .header__nav-btn {
   position: absolute;
   top: 0;
   right: 0px;
+}
+header .header__nav-btn:hover {
+  cursor: pointer;
 }
 header .header__nav-close {
   display: none;
   position: absolute;
   top: 0;
   right: 0px;
+}
+header .header__nav-close {
+  cursor: pointer;
 }
 header .hero {
   padding: 1.5em;

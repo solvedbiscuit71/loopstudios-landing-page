@@ -11,6 +11,36 @@ html {
   font-size: 15px;
 }
 
+// -----------------: Utils classes :---------------------//
+
+.toggle-menu {
+  width: 100vw;
+  height: 100vh;
+
+  background: black no-repeat;
+  position: fixed;
+
+  .header {
+    flex-direction: column;
+  }
+
+  .header__nav {
+    display: block;
+  }
+
+  .header__nav-btn {
+    display: none;
+  }
+
+  .header__nav-close {
+    display: inline;
+  }
+
+  .hero {
+    display: none;
+  }
+}
+
 // -----------------: Mobile Design :------------------- //
 
 body {
@@ -60,6 +90,10 @@ header {
         position: relative;
       }
 
+      li:hover {
+        cursor: pointer;
+      }
+
     }
 
     &__nav-btn {
@@ -68,12 +102,20 @@ header {
       right: 0px;
     }
 
+    &__nav-btn:hover {
+      cursor: pointer;
+    }
+
     &__nav-close {
       display: none;
 
       position: absolute;
       top: 0;
       right: 0px;
+    }
+
+    &__nav-close {
+      cursor: pointer;
     }
   } 
 
