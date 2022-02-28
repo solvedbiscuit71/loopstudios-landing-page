@@ -1,0 +1,14 @@
+{
+  "name": "loopstudios-landing-page",
+  "description": "This is a chanllenge from frontendmentor.io",
+  "scripts": {
+    "dev": "lite-server",
+    "sass": "sass --watch src/scss:public/css"
+  },
+  "author": "solvedbiscuit71",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "sass": "^1.49.9"
+  }
+}
