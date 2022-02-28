@@ -26,6 +26,9 @@ header .header {
 header .header__logo {
   width: 10em;
 }
+header .header__logo:hover {
+  cursor: pointer;
+}
 header .header__nav {
   display: none;
 }
@@ -40,6 +43,7 @@ header .header__nav li {
   font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 0.5em;
+  position: relative;
 }
 header .header__nav-btn {
   position: absolute;
@@ -166,7 +170,13 @@ main .creation__btn {
   letter-spacing: 5px;
   border: 1.5px solid black;
   border-radius: 0;
-  background-color: transparent;
+  background-color: white;
+  color: black;
+}
+main .creation__btn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
 footer {
@@ -209,7 +219,7 @@ footer .footer__copyrights {
   header {
     width: 100vw;
     height: 650px;
-    background-image: url("../../images/desktop/image-hero.jpg");
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 100%, white 100%), url("../../images/desktop/image-hero.jpg");
     padding-inline: 11vw;
   }
   header .header {
@@ -230,6 +240,21 @@ footer .footer__copyrights {
     font-family: "Alata";
     font-size: 1rem;
     text-transform: none;
+  }
+  header .header__nav li::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: white;
+    position: absolute;
+    bottom: -50%;
+    left: 25%;
+  }
+  header .header__nav li:hover::after {
+    width: 50%;
+  }
+  header .header__nav li:hover {
+    cursor: pointer;
   }
   header .header__nav-btn {
     display: none;
@@ -288,6 +313,10 @@ footer .footer__copyrights {
     height: 100%;
     font-size: 2rem;
   }
+  main .creation__card:hover {
+    color: black;
+    cursor: pointer;
+  }
   main .creation__grid {
     margin-block: 0;
     width: 100%;
@@ -298,26 +327,50 @@ footer .footer__copyrights {
   main .creation__grid div:nth-child(1) {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 15%, rgba(255, 255, 255, 0) 100%), url("../../images/desktop/image-deep-earth.jpg");
   }
+  main .creation__grid div:nth-child(1):hover {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.6) 0%), url("../../images/desktop/image-deep-earth.jpg");
+  }
   main .creation__grid div:nth-child(2) {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 15%, rgba(255, 255, 255, 0) 100%), url("../../images/desktop/image-night-arcade.jpg");
+  }
+  main .creation__grid div:nth-child(2):hover {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.6) 0%), url("../../images/desktop/image-night-arcade.jpg");
   }
   main .creation__grid div:nth-child(3) {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 15%, rgba(255, 255, 255, 0) 100%), url("../../images/desktop/image-soccer-team.jpg");
   }
+  main .creation__grid div:nth-child(3):hover {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.6) 0%), url("../../images/desktop/image-soccer-team.jpg");
+  }
   main .creation__grid div:nth-child(4) {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 15%, rgba(255, 255, 255, 0) 100%), url("../../images/desktop/image-grid.jpg");
+  }
+  main .creation__grid div:nth-child(4):hover {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.6) 0%), url("../../images/desktop/image-grid.jpg");
   }
   main .creation__grid div:nth-child(5) {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 15%, rgba(255, 255, 255, 0) 100%), url("../../images/desktop/image-from-above.jpg");
   }
+  main .creation__grid div:nth-child(5):hover {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.6) 0%), url("../../images/desktop/image-from-above.jpg");
+  }
   main .creation__grid div:nth-child(6) {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 15%, rgba(255, 255, 255, 0) 100%), url("../../images/desktop/image-pocket-borealis.jpg");
+  }
+  main .creation__grid div:nth-child(6):hover {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.6) 0%), url("../../images/desktop/image-pocket-borealis.jpg");
   }
   main .creation__grid div:nth-child(7) {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 15%, rgba(255, 255, 255, 0) 100%), url("../../images/desktop/image-curiosity.jpg");
   }
+  main .creation__grid div:nth-child(7):hover {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.6) 0%), url("../../images/desktop/image-curiosity.jpg");
+  }
   main .creation__grid div:nth-child(8) {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 15%, rgba(255, 255, 255, 0) 100%), url("../../images/desktop/image-fisheye.jpg");
+  }
+  main .creation__grid div:nth-child(8):hover {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.6) 0%), url("../../images/desktop/image-fisheye.jpg");
   }
 
   footer {
@@ -329,14 +382,51 @@ footer .footer__copyrights {
   footer .footer__logo {
     width: 12em;
   }
+  footer .footer__nav ul {
+    display: flex;
+    margin: 0;
+    gap: 2em;
+  }
   footer .footer__nav li {
-    display: inline-block;
-    margin-block: 0;
-    margin-right: 1em;
     font-size: 1rem;
+    position: relative;
+  }
+  footer .footer__nav li::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: white;
+    position: absolute;
+    bottom: -50%;
+    left: 25%;
+  }
+  footer .footer__nav li:hover::after {
+    width: 50%;
+  }
+  footer .footer__nav li:hover {
+    cursor: pointer;
   }
   footer .footer__media {
     justify-content: right;
+  }
+  footer .footer__media__img {
+    position: relative;
+    display: inline-block;
+  }
+  footer .footer__media__img::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: white;
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+  }
+  footer .footer__media__img:hover::after {
+    width: 100%;
+  }
+  footer .footer__media__img:hover {
+    cursor: pointer;
   }
   footer .footer__copyrights {
     text-align: right;

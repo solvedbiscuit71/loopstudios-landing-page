@@ -11,6 +11,8 @@ html {
   font-size: 15px;
 }
 
+// -----------------: Mobile Design :------------------- //
+
 body {
   margin: 0;
 }
@@ -33,6 +35,10 @@ header {
       width: 10em;
     }
 
+    &__logo:hover {
+      cursor: pointer; 
+    }
+
     &__nav {
       display: none;
 
@@ -50,7 +56,10 @@ header {
 
         text-transform: uppercase;
         margin-bottom: 0.5em;
+
+        position: relative;
       }
+
     }
 
     &__nav-btn {
@@ -238,7 +247,15 @@ main {
       border: 1.5px solid black;
       border-radius: 0;
 
-      background-color: transparent;
+      background-color: white;
+      color: black;
+    }
+
+    &__btn:hover {
+      background-color: black;
+
+      color: white;
+      cursor: pointer;
     }
   }
 }
@@ -296,12 +313,16 @@ footer {
   }
 }
 
+// --------------------: Desktop Design :--------------------- //
+
 @media only screen and (min-width: 1200px) {
   header {
     width: 100vw;
     height: 650px;
 
-    background-image: url("../../images/desktop/image-hero.jpg");
+    background-image: 
+    linear-gradient(90deg, rgba(0,0,0,0.4) 100%, rgba(255,255,255,1) 100%),
+    url("../../images/desktop/image-hero.jpg");
     padding-inline: 11vw;
 
     .header {
@@ -326,6 +347,27 @@ footer {
           font-size: 1rem;
 
           text-transform: none;
+        }
+
+        li::after {
+          content: "";
+
+          height: 2px;
+          width: 0;
+
+          background-color: white;
+
+          position: absolute;
+          bottom: -50%;
+          left: 25%;
+        }
+
+        li:hover::after {
+          width: 50%;
+        }
+
+        li:hover {
+          cursor: pointer;
         }
       }
 
@@ -405,6 +447,11 @@ footer {
         font-size: 2rem;
       }
 
+      &__card:hover {
+        color: black;
+        cursor: pointer;
+      }
+
       &__grid {
         margin-block: 0;
         width: 100%;
@@ -419,9 +466,21 @@ footer {
           url("../../images/desktop/image-deep-earth.jpg");
         }
 
+        div:nth-child(1):hover {
+          background-image: 
+          linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.6) 0%),
+          url("../../images/desktop/image-deep-earth.jpg");
+        }
+
         div:nth-child(2) {
           background-image: 
           linear-gradient(0deg, rgba(0,0,0,0.6) 15%, rgba(255,255,255,0) 100%),
+          url("../../images/desktop/image-night-arcade.jpg");
+        }
+
+        div:nth-child(2):hover {
+          background-image: 
+          linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.6) 0%),
           url("../../images/desktop/image-night-arcade.jpg");
         }
 
@@ -431,9 +490,21 @@ footer {
           url("../../images/desktop/image-soccer-team.jpg");
         }
 
+        div:nth-child(3):hover {
+          background-image: 
+          linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.6) 0%),
+          url("../../images/desktop/image-soccer-team.jpg");
+        }
+
         div:nth-child(4) {
           background-image: 
           linear-gradient(0deg, rgba(0,0,0,0.6) 15%, rgba(255,255,255,0) 100%),
+          url("../../images/desktop/image-grid.jpg");
+        }
+
+        div:nth-child(4):hover {
+          background-image: 
+          linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.6) 0%),
           url("../../images/desktop/image-grid.jpg");
         }
 
@@ -443,9 +514,21 @@ footer {
           url("../../images/desktop/image-from-above.jpg");
         }
 
+        div:nth-child(5):hover {
+          background-image: 
+          linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.6) 0%),
+          url("../../images/desktop/image-from-above.jpg");
+        }
+
         div:nth-child(6) {
           background-image: 
           linear-gradient(0deg, rgba(0,0,0,0.6) 15%, rgba(255,255,255,0) 100%),
+          url("../../images/desktop/image-pocket-borealis.jpg");
+        }
+
+        div:nth-child(6):hover {
+          background-image: 
+          linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.6) 0%),
           url("../../images/desktop/image-pocket-borealis.jpg");
         }
 
@@ -455,11 +538,22 @@ footer {
           url("../../images/desktop/image-curiosity.jpg");
         }
 
+        div:nth-child(7):hover {
+          background-image: 
+          linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.6) 0%),
+          url("../../images/desktop/image-curiosity.jpg");
+        }
+
         div:nth-child(8) {
           background-image: 
           linear-gradient(0deg, rgba(0,0,0,0.6) 15%, rgba(255,255,255,0) 100%),
           url("../../images/desktop/image-fisheye.jpg");
+        }
 
+        div:nth-child(8):hover {
+          background-image: 
+          linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.6) 0%),
+          url("../../images/desktop/image-fisheye.jpg");
         }
       }
     }
@@ -478,18 +572,69 @@ footer {
       }
 
       &__nav {
-        li {
-          display: inline-block;
-          margin-block: 0;
-          margin-right: 1em;
+        ul {
+          display: flex;
+          margin: 0;
 
+          gap: 2em;
+        }
+
+        li {
           font-size: 1rem;
+          position: relative;
+        }
+
+        li::after {
+          content: "";
+
+          height: 2px;
+          width: 0;
+
+          background-color: white;
+
+          position: absolute;
+          bottom: -50%;
+          left: 25%;
+        }
+
+        li:hover::after {
+          width: 50%;
+        }
+
+        li:hover {
+          cursor: pointer;
         }
       }
     }
 
     .footer__media {
       justify-content: right;
+
+      &__img {
+        position: relative;
+        display: inline-block;
+      }
+
+      &__img::after {
+        content: "";
+
+        height: 2px;
+        width: 0;
+
+        background-color: white;
+
+        position: absolute;
+        bottom: -20%;
+        left: 0;
+      }
+
+      &__img:hover::after {
+        width: 100%;
+      }
+
+      &__img:hover {
+        cursor: pointer;
+      }
     }
 
     .footer__copyrights {
@@ -497,53 +642,3 @@ footer {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
